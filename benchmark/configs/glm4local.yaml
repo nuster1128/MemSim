@@ -1,0 +1,77 @@
+evaluation_config:
+  QAType_list:
+  - simple
+  - conditional
+  - comparative
+  - aggregative
+  - post_processing
+  - noisy
+  data_list:
+  - data_name: memdaily_0
+    data_path: data/memdaily_0.json
+  - data_name: memdaily_9
+    data_path: data/memdaily_9.json
+  - data_name: memdaily_49
+    data_path: data/memdaily_49.json
+  - data_name: memdaily_99
+    data_path: data/memdaily_99.json
+  - data_name: memdaily_199
+    data_path: data/memdaily_199.json
+  model_list:
+  - model_name: OracleMemAgent
+    model_path: methods.OracleMemAgent.OracleMemAgent
+    model_config:
+      LLM_config:
+        model_name: glm-4-9b-chat
+        model_type: local
+        server_port: 8086
+  - model_name: NoiseMemAgent
+    model_path: methods.NoiseMemAgent.NoiseMemAgent
+    model_config:
+      LLM_config:
+        model_name: glm-4-9b-chat
+        model_type: local
+        server_port: 8086
+  - model_name: NonMemAgent
+    model_path: methods.NonMemAgent.NonMemAgent
+    model_config:
+      LLM_config:
+        model_name: glm-4-9b-chat
+        model_type: local
+        server_port: 8086
+  - model_name: FullMemAgent
+    model_path: methods.FullMemAgent.FullMemAgent
+    model_config:
+      LLM_config:
+        model_name: glm-4-9b-chat
+        model_type: local
+        server_port: 8086
+  - model_name: RecentMemAgent
+    model_path: methods.RecentMemAgent.RecentMemAgent
+    model_config:
+      LLM_config:
+        model_name: glm-4-9b-chat
+        model_type: local
+        server_port: 8086
+      size: 5
+  - model_name: RetMemAgent
+    model_path: methods.RetMemAgent.RetMemAgent
+    model_config:
+      embedding_config:
+        model_name: llama-160m
+        model_path: /data/zhangzeyu/local_llms/llama-160m
+        embedding_dim: 768
+      LLM_config:
+        model_name: glm-4-9b-chat
+        model_type: local
+        server_port: 8086
+      top_k: 5
+  metrics:
+  - accuracy
+  - recall # recall5
+  - write_time
+  - process_time
+  - read_time
+meta_config:
+  cuda: '5'
+  result_path: result_glm4_local
