@@ -1,6 +1,6 @@
 # MemSim: A Bayesian Simulator for Evaluating Memory of LLM-based Personal Assistants
 
-![methods](assets\methods.png)
+![methods](assets/methods.png)
 
 LLM-based agents have been widely applied in personal assistants, that are able to memorize information from user messages. However, there still lacks a comprehensive and objective evaluation on their memory capabilities, due to the difficulty in constructing reliable questions and answers based on messages. In this paper, we propose MemSim, a Bayesian simulator to automatically generate reliable user messages and QAs to evaluate memory capabilities of LLM-based agents. We introduce the BRNet and causal generation mechanism to avoid LLM's hallucination impact on factual information. Based on MemSim, we generate a dataset in the daily-life scenario, and conduct extensive experiments to verify the effectiveness of our methods. We also present a benchmark for different memory mechanisms of LLM-based agents. To benefit the research community of this field, we have released our project at https://github.com/nuster1128/MemSim.
 
