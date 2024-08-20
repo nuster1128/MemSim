@@ -89,7 +89,7 @@ The full benchmark can be found in `benchmark/full_results`.
 
 #### * Step 1: Prepare Datasets
 
-You can prepare datasets by your self, or use our prepared datasets from XXX and put it into `benchmark/data`.
+You can prepare datasets by your self, or use our prepared datasets from https://drive.google.com/drive/folders/1cO8aVCOLrRZflQs4gz8PwiH9SnOTOKJq?usp=sharing and put it into `benchmark/data`.
 
 If you want to re-generate the dataset, you can execute the following commands:
 
