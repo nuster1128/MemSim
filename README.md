@@ -2,7 +2,7 @@
 
 ![methods](assets/methods.png)
 
-LLM-based agents have been widely applied in personal assistants, that are able to memorize information from user messages. However, there still lacks a comprehensive and objective evaluation on their memory capabilities, due to the difficulty in constructing reliable questions and answers based on messages. In this paper, we propose MemSim, a Bayesian simulator to automatically generate reliable user messages and QAs to evaluate memory capabilities of LLM-based agents. We introduce the BRNet and causal generation mechanism to avoid LLM's hallucination impact on factual information. Based on MemSim, we generate a dataset in the daily-life scenario, and conduct extensive experiments to verify the effectiveness of our methods. We also present a benchmark for different memory mechanisms of LLM-based agents. To benefit the research community of this field, we have released our project at https://github.com/nuster1128/MemSim.
+LLM-based agents have been widely applied as personal assistants, capable of memorizing information from user messages and responding to personal queries. However, there still lacks an objective and automatic evaluation on their memory capability, largely due to the challenges in constructing reliable questions and answers (QAs) according to user messages. In this paper, we propose MemSim, a Bayesian simulator designed to automatically construct reliable QAs from generated user messages, simultaneously keeping their diversity and scalability. Specifically, we introduce the Bayesian Relation Network (BRNet) and a causal generation mechanism to mitigate the impact of LLM hallucinations on factual information, facilitating the automatic creation of an evaluation dataset. Based on MemSim, we generate a dataset in the daily-life scenario, named MemDaily, and conduct extensive experiments to assess the effectiveness of our approach. We also provide a benchmark for evaluating different memory mechanisms in LLM-based agents with the MemDaily dataset. To benefit the research community, we have released our project at \url{https://github.com/nuster1128/MemSim}.
 
 ## MemDaily Dataset
 
@@ -15,7 +15,7 @@ We provide a copy of MemDaily Dataset that we have generated, and the summarizat
 |  Trajectories   |  500  |  500  |  492  |  462  |  500  |  500  | 2,954  |
 |    Messages     | 4215  | 4195  | 3144  | 5536  | 4438  | 4475  | 26,003 |
 |    Questions    |  500  |  500  |  492  |  462  |  500  |  500  | 2,954  |
-|       TPM       | 15.48 | 15.49 | 14.66 | 14.65 | 17.07 | 16.14 |   -    |
+|       TPM       | 15.48 | 15.49 | 14.66 | 14.65 | 17.07 | 16.14 | 15.59  |
 
 You can find it at  `data_generation/final_dataset/memdaily.json`.
 
@@ -46,7 +46,7 @@ python generate_user_profiles.py
 
 Then, you will obtain user profiles in `graph.json`.
 
-#### Step 3: Generate user messages and QAs.
+#### Step 3: Generate user messages and construct QAs.
 
 Choose one file of any types of generation in `data_generation`, and execute the following commands. 
 
