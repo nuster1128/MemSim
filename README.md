@@ -125,9 +125,17 @@ You can run the benchmark by the following commands.
 python main.py
 ```
 
-## Acknowledgement
+## Citation
 
 Please cite our paper if it can help you.
+```
+@article{zhang2024memsim,
+  title={MemSim: A Bayesian Simulator for Evaluating Memory of LLM-based Personal Assistants},
+  author={Zhang, Zeyu and Dai, Quanyu and Chen, Luyu and Jiang, Zeren and Li, Rui and Zhu, Jieming and Chen, Xu and Xie, Yi and Dong, Zhenhua and Wen, Ji-Rong},
+  journal={arXiv preprint arXiv:2409.20163},
+  year={2024}
+}
+```
 
 ## Contact us
 
